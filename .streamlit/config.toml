@@ -1,0 +1,15 @@
+[theme]
+# The main accent color (Progress bars, active borders, buttons)
+primaryColor="#a7ce45"
+
+# The main background color of the app
+backgroundColor="#f3f3f3"
+
+# The background color for sidebars, input boxes, and expanders
+secondaryBackgroundColor="#ffffff"
+
+# The main text color (Dark Slate)
+textColor="#2b3338"
+
+# The font family
+font="sans serif"
