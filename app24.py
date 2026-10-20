@@ -49,23 +49,6 @@ def get_progress(conn, username):
 # --- 2. APP CONFIGURATION & LOGIN ---
 st.set_page_config(page_title="IMP>ACT Framework", page_icon="🌱", layout="wide")
 
-# --- CUSTOM CSS FOR HIGH-CONTRAST INPUT BOXES ---
-st.markdown("""
-    <style>
-    /* Target all text inputs and text areas */
-    div[data-baseweb="input"] > div, div[data-baseweb="textarea"] > div {
-        background-color: #ffffff !important; /* Pure white background */
-        border: 2px solid #4e5a62 !important; /* IMP>ACT Slate Blue border */
-        border-radius: 5px !important;
-    }
-    
-    /* Change border to IMP>ACT Green when the user clicks/types inside */
-    div[data-baseweb="input"] > div:focus-within, div[data-baseweb="textarea"] > div:focus-within {
-        border: 2px solid #a7ce45 !important;
-    }
-    </style>
-""", unsafe_allow_html=True)
-
 # --- CUSTOM CSS TO MATCH DASHBOARD THEME ---
 st.markdown(
     """
@@ -138,8 +121,14 @@ st.markdown(
     .stTextArea div[data-baseweb="textarea"],
     .stSelectbox div[data-baseweb="select"] {
         background-color: #ffffff !important;
-        border: 1px solid #d8dde0 !important;
+        border: 2px solid #4e5a62 !important; /* Bold Slate Blue border */
         border-radius: 6px !important;
+    }
+
+    /* Make the border glow IMP>ACT Green when typing */
+    .stTextInput div[data-baseweb="input"]:focus-within, 
+    .stTextArea div[data-baseweb="textarea"]:focus-within {
+        border-color: #a7ce45 !important; 
     }
 
     /* 9. Info/Success boxes */
